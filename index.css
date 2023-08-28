@@ -1,0 +1,83 @@
+body{
+	background-color: #421b02;
+}
+
+h1{
+	font-family: arial;
+}
+
+.head1{
+	color: #2ee671;
+}
+
+#Head2{
+	color: #9ce62e;
+}
+
+
+.Head4{
+	color: #e6742e;
+}
+
+img{
+	display: block;
+	margin: auto;
+}
+
+video{
+	display: block;
+	margin: auto;
+}
+
+
+/*
+============================
+CSS FOR Student FORM 
+============================
+*/
+
+
+.mainDiv{
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container{
+	width : 50%;
+	background-color: #34ebcf;
+	padding: 2rem;
+}
+
+.inputBox{
+	width: 100%;
+	margin: 10px 0;
+	padding: 10px;
+	border: none;
+	border-radius: 10px;
+}
+
+.loginbtn{
+	width: 100%;
+	border: none;
+	padding: 10px;
+	border-radius: 10px;
+	margin: 10px 0;
+}
+
+label{
+	color: white;
+	font-family: arial;
+	font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+

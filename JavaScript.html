@@ -1,0 +1,144 @@
+<html>
+	<head>
+		<title> Learing JavaScript </title>
+	</head>
+
+<body>
+	<h1> Arithmatic Opertor </h1>
+	<h3> a = 5, b = 11 </h3>
+	
+	<p id="p1"> a + b = </p>
+	<p id="p2"> a - b = </p>
+	<p id="p3"> a * b = </p>
+	<p id="p4"> a / b = </p>
+
+	<hr>
+	<h1> Get Full Name </h1>
+	
+	<input type="text" placeholder = "First Name" id="fname" onchange = "getFullName()"><br>
+	<input type="text" placeholder = "Last Name" id="lname" onchange = "getFullName()"><br>
+	<button onclick="getFullName()"> Submit </button>
+	<p id="fullName"> </p>
+
+
+	<!--
+	============================
+	Change Image on Click
+	============================
+	-->
+
+	<hr>
+	<button onclick = "Day()"> Day </button>
+	<img src="./media/images/day.jpg" width = 300 id="image">
+	<button onclick = "Night()"> Night </button>
+	
+
+<script>
+
+	/*
+	===================
+	Operators in JavaScript
+	===================
+	*/
+
+	let a = 5;
+	let b = 11;
+	document.getElementById("p1").innerText += a + b;
+	document.getElementById("p2").innerText += a - b;
+	document.getElementById("p3").innerText += a * b;
+	document.getElementById("p4").innerText += a / b;
+	
+
+	/*
+	=====================
+	Functions in JavaScript
+	=====================
+	*/
+
+	function div(x,y){	// Parameter
+		let c = x / y
+		
+		function solve(z){
+			let d = c * z
+			return d
+		}
+	
+		return solve
+	}
+
+	let result = div(20, 5) // Argument
+	let res = result(5)
+	console.log(res)
+
+
+	/*
+	=======================
+	Objects in JavaScript
+	=======================
+	*/
+
+	let students = {
+		fname : "Alishba",
+		lname : "Khan",
+		age : 12,
+		class: 7,
+		fullName : function () {
+			return this.fname + " " + this.lname
+		}
+	}
+
+	console.log("Student Name : " + students.fullName() );
+	console.log("Student Age : " + students.age)
+	console.log("Student Class : " + students.class)
+
+
+	/*
+	=====================
+	Get Full Name JavaScript
+	=====================
+	*/
+
+	function getFullName( ){
+		let firstName = document.getElementById("fname").value;
+		let lastName = document.getElementById("lname").value;
+
+		 document.getElementById("fullName").innerHTML = firstName + " " + lastName;
+	}
+	
+
+	/*
+	=======================
+	Day/Night Function for Images
+	=======================
+	*/
+
+	function Day(){
+		document.getElementById("image").src="./media/images/day.jpg"
+	}
+
+	function Night(){
+		document.getElementById("image").src="./media/images/night.jpg"
+	}
+
+
+	/*
+	=======================
+	Array and Loop in JavaScript
+	=======================
+	*/
+	
+
+	let class7 = [ "Mohit", "Rohit","Akbar","Mudassir","Ramanuj" ]
+	
+	//Access element from array using it's index number
+	
+	totalStudents = class7.length
+	console.log("Total Students : " + totalStudents)
+	
+	for( let index = 0; index < totalStudents; index++ ){
+		console.log(class7[ index ] )
+	}
+
+</script>
+</body>
+</html>
